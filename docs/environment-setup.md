@@ -58,7 +58,6 @@ Interactive (default)
 **Location Setting:**  
 Automatic location selection (EU)
 
-
 ---
 
 ## Notes
