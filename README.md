@@ -12,11 +12,9 @@ The system integrates:
 - Prompt strategy comparison (zero-shot vs few-shot)  
 - Cost and latency benchmarking  
 
-This project is developed independently alongside my MSc in Advanced Computer Science (Data Analytics) at the University of Leeds.
+The project extends foundational concepts explored through Google Cloud Skills Boost labs into a fully architected, experimentally evaluated analytical system.
 
-The foundational concepts were introduced through Google Cloud Skills Boost labs and extended into a fully designed, architected, and experimentally evaluated system.
-
-This is **not** my MSc dissertation project.
+The emphasis is on scalability, analytical rigor, and cost-aware cloud engineering.
 
 ---
 
@@ -30,7 +28,7 @@ The system is designed to:
 - Benchmark latency and scalability  
 - Maintain production-style structure and reproducibility  
 
-The focus is analytical rigor under practical cloud engineering limits.
+Cost, performance, and architectural clarity are treated as first-class evaluation dimensions.
 
 ---
 
@@ -44,7 +42,7 @@ The architecture follows a structured cloud-native workflow:
 4. Gemini inference via Vertex AI remote model  
 5. Structured evaluation and benchmarking  
 
-The design prioritises scalability, clarity, and cost-awareness.
+The design prioritises scalability, reproducibility, and engineering discipline.
 
 ---
 
@@ -55,34 +53,34 @@ The design prioritises scalability, clarity, and cost-awareness.
 - Random Forest (BigQuery ML)
 
 Evaluation Metrics:
-- Accuracy
-- Precision / Recall / F1
-- Training time
-- Inference latency
-- Cost
+- Accuracy  
+- Precision / Recall / F1  
+- Training time  
+- Inference latency  
+- Cost  
 
 ---
 
 ### Generative AI (Gemini via Vertex AI)
 
 Prompt strategies evaluated:
-- Zero-shot prompting
-- Few-shot prompting
+- Zero-shot prompting  
+- Few-shot prompting  
 
 Evaluation Metrics:
-- Classification accuracy
-- Token usage
-- Cost per 1,000 predictions
-- Response latency
-- Variance across runs
+- Classification accuracy  
+- Token usage  
+- Cost per 1,000 predictions  
+- Response latency  
+- Performance variance  
 
 ---
 
-## Cost Discipline
+## Cost Management
 
-This project operates under a constrained Google Cloud credit budget (£222).
+The system is developed under a constrained Google Cloud credit budget of £222 or ($300)
 
-Cost management strategies include:
+Cost control strategies include:
 
 - Use of BigQuery free-tier limits  
 - Controlled dataset size  
@@ -90,7 +88,7 @@ Cost management strategies include:
 - Budget alerts configured in GCP  
 - Explicit cost tracking per experiment  
 
-Cost is treated as a first-class evaluation metric, not an afterthought.
+Cloud cost-awareness is incorporated directly into experimental evaluation.
 
 ---
 
@@ -110,16 +108,11 @@ The structure reflects reproducibility and software engineering discipline.
 
 ---
 
-## Academic Alignment
+## Academic Context
 
-This project aligns with MSc modules in:
+Developed alongside an MSc in Advanced Computer Science (Data Analytics) at the University of Leeds.
 
-- Machine Learning  
-- Cloud Computing Systems  
-- Data Mining & Text Analytics  
-- Advanced Software Engineering  
-
-It bridges statistical modelling and generative AI within a scalable cloud architecture.
+The system bridges statistical learning, distributed cloud systems, and generative AI within a unified experimental framework.
 
 ---
 
@@ -129,12 +122,6 @@ It bridges statistical modelling and generative AI within a scalable cloud archi
 - Prompt robustness testing  
 - Throughput stress testing  
 - Infrastructure automation (Terraform)  
-- Deployment as a lightweight API endpoint  
+- Deployment as a lightweight inference API  
 
 ---
-
-## Author
-
-MSc Advanced Computer Science (Data Analytics)  
-University of Leeds  
-Independent Cloud-Native Systems Project
