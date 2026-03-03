@@ -6,7 +6,7 @@
 cloud-text-analytics
 
 **Google Cloud Project ID:**  
-<replace-with-your-project-id>
+cloud-text-analytics
 
 **Region:**  
 EU (BigQuery dataset region)  
