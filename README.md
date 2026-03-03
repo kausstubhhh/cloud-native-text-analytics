@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a production-oriented, cloud-native text analytics system built on Google Cloud Platform.
+This project implements a production-oriented, cloud-native text analytics system built on Google Cloud Platform (Google Cloud console).
 
 The system integrates:
 
