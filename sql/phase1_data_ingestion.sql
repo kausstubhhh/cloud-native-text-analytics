@@ -12,7 +12,6 @@ FROM text_analytics.train_raw
 WHERE Title IS NOT NULL
   AND Description IS NOT NULL;
 
--- =========================================
 -- CLEAN TEST DATA
 
 CREATE OR REPLACE TABLE text_analytics.test_clean AS
