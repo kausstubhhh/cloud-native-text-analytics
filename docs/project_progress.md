@@ -160,11 +160,9 @@ Future phases will compare this baseline with generative AI approaches.
 
 # Next Phase
 
-Phase 4 will introduce Gemini integration via Vertex AI remote models.
+Phase 4: Gemini zero-shot classification using Vertex AI
 
-Experiments will include:
+Gemini Zero-Shot Accuracy: 0.8735
+Logistic Regression Baseline: 0.789
 
-- Zero-shot classification  
-- Few-shot prompting  
-- Latency measurement  
-- Cost evaluation  
+Gemini outperformed the classical baseline by ~8.4%.
