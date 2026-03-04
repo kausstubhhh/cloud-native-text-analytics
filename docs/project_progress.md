@@ -158,11 +158,76 @@ Future phases will compare this baseline with generative AI approaches.
 
 ---
 
-# Next Phase
+# Phase 4 — Generative AI Classification (Gemini)
 
-Phase 4: Gemini zero-shot classification using Vertex AI
+## Objective
 
-Gemini Zero-Shot Accuracy: 0.8735
-Logistic Regression Baseline: 0.789
+Integrate a generative AI model into the cloud-native pipeline and evaluate its performance on the AG News classification task.
 
-Gemini outperformed the classical baseline by ~8.4%.
+Gemini was accessed through **Vertex AI remote models in BigQuery**, allowing LLM inference directly from SQL queries.
+
+---
+
+## Architecture Integration
+
+A remote connection was created between **BigQuery and Vertex AI**.
+
+Pipeline flow:
+
+BigQuery Dataset  
+→ SQL Prompt Construction  
+→ Vertex AI Remote Model  
+→ Gemini 2.5 Flash  
+→ Predictions returned to BigQuery  
+
+---
+
+## Experimental Setup
+
+To control cost and latency, a subset of the validation dataset was used.
+
+Evaluation sample size:
+
+2000 news articles
+
+Table created:
+
+text_analytics.llm_test_sample  
+
+Each article was classified using a **zero-shot prompt**.
+
+Prompt used:
+
+Classify the following news article into one of these categories:  
+World, Sports, Business, Sci/Tech.  
+Return only the category name.
+
+---
+
+## Results
+
+Predictions were generated using **ML.GENERATE_TEXT** and stored in:
+
+text_analytics.gemini_zero_shot_predictions  
+
+Predicted labels were converted to numeric format for evaluation.
+
+Evaluation sample:
+
+Total Samples: 2000  
+Correct Predictions: 1747  
+
+Accuracy:
+
+0.8735
+
+---
+
+## Comparison with Baseline
+
+| Model | Approach | Accuracy |
+|------|------|------|
+| Logistic Regression | Classical ML | ~0.79 |
+| Gemini 2.5 Flash | Zero-Shot LLM | **0.8735** |
+
+Gemini achieved higher accuracy than the classical baseline on the evaluation dataset.
