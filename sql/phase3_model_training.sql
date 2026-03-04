@@ -1,11 +1,7 @@
--- =====================================================
 -- PHASE 3: Classical Machine Learning Baseline
--- =====================================================
 
 
--- =====================================================
 -- Train Logistic Regression Model
--- =====================================================
 
 CREATE OR REPLACE MODEL text_analytics.logistic_regression_model
 OPTIONS(
@@ -18,10 +14,7 @@ SELECT
 FROM text_analytics.train_split;
 
 
-
--- =====================================================
 -- Train Random Forest Model
--- =====================================================
 
 CREATE OR REPLACE MODEL text_analytics.random_forest_model
 OPTIONS(
@@ -34,11 +27,7 @@ SELECT
   label
 FROM text_analytics.train_split;
 
-
-
--- =====================================================
 -- Evaluate Logistic Regression
--- =====================================================
 
 SELECT *
 FROM ML.EVALUATE(
@@ -51,9 +40,7 @@ FROM ML.EVALUATE(
 
 
 
--- =====================================================
 -- Evaluate Random Forest
--- =====================================================
 
 SELECT *
 FROM ML.EVALUATE(
