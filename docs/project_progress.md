@@ -261,3 +261,70 @@ Gemini Few-Shot Accuracy:
 | Gemini 2.5 Flash | Few-Shot | **~0.90** |
 
 Few-shot prompting improved performance compared to zero-shot prompting by providing structured examples within the prompt.
+
+
+# Phase 6 — System Evaluation
+
+## Objective
+
+Evaluate the performance of classical machine learning and generative AI approaches within the cloud-native text analytics system.
+
+The evaluation focuses on three aspects:
+
+- Accuracy
+- Latency
+- Cost
+
+---
+
+## Accuracy Comparison
+
+The final experiment compares three approaches:
+
+| Model | Method | Accuracy |
+|------|------|------|
+| Logistic Regression | Classical ML | 0.789 |
+| Gemini 2.5 Flash | Zero-Shot Prompt | 0.8735 |
+| Gemini 2.5 Flash | Few-Shot Prompt | 0.901 |
+
+Few-shot prompting achieved the highest performance on the evaluation dataset.
+
+---
+
+## Latency Comparison
+
+Approximate inference latency per prediction:
+
+| Model | Latency |
+|------|------|
+| Logistic Regression | ~50 ms |
+| Gemini Zero-Shot | ~1.5–2 seconds |
+| Gemini Few-Shot | ~2–2.5 seconds |
+
+Classical models provide significantly faster inference, while LLM-based methods trade speed for improved semantic understanding.
+
+---
+
+## Cost Analysis
+
+Approximate cloud cost for the experiments:
+
+| Component | Estimated Cost |
+|------|------|
+| BigQuery ML Training | ~$0–1 |
+| Gemini Zero-Shot (2000 predictions) | ~$2–3 |
+| Gemini Few-Shot (2000 predictions) | ~$3–4 |
+
+Total estimated cost:
+
+~$5
+
+---
+
+## Observations
+
+The experiments highlight the trade-off between traditional machine learning and generative AI approaches.
+
+Classical models offer low latency and minimal cost, while LLM-based methods provide higher accuracy for semantic classification tasks.
+
+Prompt engineering also plays a significant role in improving LLM performance.
