@@ -2,117 +2,85 @@
 
 ## Overview
 
-This project implements a production-oriented, cloud-native text analytics system built on Google Cloud Platform (Google Cloud console).
+This project implements a cloud-native text analytics system built on Google Cloud Platform.
 
-The system integrates:
+The system integrates distributed data processing, classical machine learning, and generative AI to perform large-scale news topic classification using the AG News dataset.
+
+Core components include:
 
 - BigQuery-based distributed data pipelines  
-- Classical machine learning models using BigQuery ML (Logistic Regression, Random Forest)  
-- Gemini integration via Vertex AI remote model in BigQuery  
+- Classical machine learning using BigQuery ML (Logistic Regression, Random Forest)  
+- Gemini integration via Vertex AI remote models in BigQuery  
 - Prompt strategy comparison (zero-shot vs few-shot)  
-- Cost and latency benchmarking  
+- Cost, latency, and performance benchmarking  
 
-The project extends foundational concepts explored through Google Cloud Skills Boost labs into a fully architected, experimentally evaluated analytical system.
+The project extends concepts explored in Google Cloud Skills Boost labs into a fully structured and experimentally evaluated analytical system.
 
-The emphasis is on scalability, analytical rigor, and cost-aware cloud engineering.
+The focus is on scalability, reproducibility, and cost-aware cloud engineering.
 
 ---
 
 ## Objectives
 
-The system is designed to:
+The system was designed to:
 
-- Compare classical ML and generative AI approaches for text classification  
-- Evaluate performance under real cloud constraints  
-- Measure cost per inference and overall experiment cost  
-- Benchmark latency and scalability  
-- Maintain production-style structure and reproducibility  
+- Compare classical ML models and LLM-based approaches for text classification  
+- Evaluate performance under real cloud infrastructure constraints  
+- Measure accuracy, latency, and cost per inference  
+- Demonstrate scalable SQL-based ML pipelines  
+- Maintain production-style project structure and reproducibility  
 
-Cost, performance, and architectural clarity are treated as first-class evaluation dimensions.
+Accuracy, latency, and cost are treated as core evaluation dimensions.
 
 ---
 
 ## System Architecture
 
-The architecture follows a structured cloud-native workflow:
+The system follows a structured cloud-native pipeline:
 
-1. Dataset ingestion into BigQuery  
-2. SQL-based preprocessing and feature preparation  
-3. Classical model training using BigQuery ML  
-4. Gemini inference via Vertex AI remote model  
-5. Structured evaluation and benchmarking  
+AG News Dataset → BigQuery Data Ingestion → SQL Data Cleaning & Feature Preparation → BigQuery ML Baseline Models → Vertex AI Remote Model Connection → Gemini LLM Classification → Evaluation & Benchmarking
 
-The design prioritises scalability, reproducibility, and engineering discipline.
+This architecture enables experimentation with both statistical models and large language models within a unified cloud-native workflow.
 
 ---
 
 ## Modelling Approach
 
-### Classical Baselines
-- Logistic Regression (BigQuery ML)
-- Random Forest (BigQuery ML)
+### Classical Machine Learning Baselines
 
-Evaluation Metrics:
+Models trained using BigQuery ML:
+
+- Logistic Regression  
+- Random Forest  
+
+Evaluation metrics:
+
 - Accuracy  
-- Precision / Recall / F1  
+- Precision / Recall / F1-score  
 - Training time  
 - Inference latency  
-- Cost  
+- Cloud cost  
+
+Logistic Regression served as the primary baseline due to its strong performance on high-dimensional text features.
 
 ---
 
 ### Generative AI (Gemini via Vertex AI)
 
-Prompt strategies evaluated:
+Large language model inference was integrated directly into BigQuery using Vertex AI remote models.
+
+Two prompt strategies were evaluated:
+
 - Zero-shot prompting  
 - Few-shot prompting  
 
-Evaluation Metrics:
+Evaluation metrics:
+
 - Classification accuracy  
 - Token usage  
-- Cost per 1,000 predictions  
+- Cost per inference  
 - Response latency  
-- Performance variance  
-
----
-
-## Cost Management
-
-The system is developed under a constrained Google Cloud credit budget of £222 or ($300)
-
-Cost control strategies include:
-
-- Use of BigQuery free-tier limits  
-- Controlled dataset size  
-- Batched inference queries  
-- Budget alerts configured in GCP  
-- Explicit cost tracking per experiment  
-
-Cloud cost-awareness is incorporated directly into experimental evaluation.
-
----
-
-## Repository Structure
-
-```
-cloud-native-text-analytics/
-│
-├── docs/               # Architecture and experiment documentation
-├── sql/                # BigQuery SQL scripts and model definitions
-├── evaluation/         # Analysis notebooks and metrics evaluation
-├── results/            # Experimental outputs
-└── README.md
-```
-
-The structure reflects reproducibility and software engineering discipline.
-
----
-
-## Academic Context
-
-Developed alongside an MSc in Advanced Computer Science (Data Analytics) at the University of Leeds.
-
-The system bridges statistical learning, distributed cloud systems, and generative AI within a unified experimental framework.
+- Performance variance across prompts  
 
 ---
 
@@ -124,14 +92,48 @@ The system bridges statistical learning, distributed cloud systems, and generati
 | Gemini 2.5 Flash | Zero-Shot | 0.873 |
 | Gemini 2.5 Flash | Few-Shot | **0.901** |
 
+Few-shot prompting achieved the best overall performance, demonstrating how prompt engineering can significantly improve LLM classification accuracy.
+
+---
+
+## Cost Management
+
+The system was developed under a Google Cloud credit
+
+Cost control strategies included:
+
+- Use of BigQuery free-tier limits where possible  
+- Restricting dataset sampling for LLM inference  
+- Batched inference queries  
+- Budget alerts configured in GCP  
+- Explicit cost monitoring via Google Cloud Billing reports  
+
+The total experiment cost remained under a few pounds, demonstrating that LLM-enabled analytics pipelines can be built and evaluated with minimal cloud cost.
+
+---
+
+## Repository Structure
+
+The repository structure emphasizes clarity, reproducibility, and engineering discipline.
+
+---
+
+## Academic Context
+
+Developed alongside an MSc in Advanced Computer Science (Data Analytics) at the University of Leeds.
+
+The project explores the intersection of statistical learning, distributed cloud data systems, and generative AI within a unified experimental framework.
+
 ---
 
 ## Future Work
 
-- Multi-class classification benchmarking  
-- Prompt robustness testing  
-- Throughput stress testing  
-- Infrastructure automation (Terraform)  
-- Deployment as a lightweight inference API  
+Potential extensions include:
+
+- Larger-scale benchmarking across additional datasets  
+- Robustness testing of prompt strategies  
+- Throughput and scalability stress testing  
+- Infrastructure automation using Terraform  
+- Deployment as a lightweight LLM-assisted inference API  
 
 ---
