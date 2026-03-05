@@ -116,6 +116,16 @@ The system bridges statistical learning, distributed cloud systems, and generati
 
 ---
 
+## Experimental Results
+
+| Model | Method | Accuracy |
+|------|------|------|
+| Logistic Regression | Classical ML | 0.789 |
+| Gemini 2.5 Flash | Zero-Shot | 0.873 |
+| Gemini 2.5 Flash | Few-Shot | **0.901** |
+
+---
+
 ## Future Work
 
 - Multi-class classification benchmarking  
