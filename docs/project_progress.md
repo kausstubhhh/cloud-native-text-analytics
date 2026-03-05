@@ -231,3 +231,33 @@ Accuracy:
 | Gemini 2.5 Flash | Zero-Shot LLM | **0.8735** |
 
 Gemini achieved higher accuracy than the classical baseline on the evaluation dataset.
+
+# Phase 5 — Prompt Engineering Experiment
+
+## Objective
+
+Evaluate the effect of prompt engineering on generative AI classification performance.
+
+Few-shot prompting was tested by providing labelled examples within the prompt to guide the model.
+
+---
+
+## Results
+
+Evaluation sample: 2000 articles
+
+Gemini Few-Shot Accuracy:
+
+0.901
+
+---
+
+## Comparison
+
+| Model | Method | Accuracy |
+|------|------|------|
+| Logistic Regression | Classical ML | ~0.79 |
+| Gemini 2.5 Flash | Zero-Shot | ~0.87 |
+| Gemini 2.5 Flash | Few-Shot | **~0.90** |
+
+Few-shot prompting improved performance compared to zero-shot prompting by providing structured examples within the prompt.
