@@ -1,5 +1,12 @@
 # Scalable Cloud-Native Text Analytics System
 
+![Platform](https://img.shields.io/badge/Platform-Google%20Cloud-blue)
+![ML](https://img.shields.io/badge/Machine%20Learning-BigQuery%20ML-green)
+![LLM](https://img.shields.io/badge/LLM-Gemini%202.5%20Flash-purple)
+![Dataset](https://img.shields.io/badge/Dataset-AG%20News-orange)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+![GCP](https://img.shields.io/badge/Cloud-Google%20Cloud%20Platform-blue)
+
 ## Overview
 
 This project implements a cloud-native text analytics system built on Google Cloud Platform.
