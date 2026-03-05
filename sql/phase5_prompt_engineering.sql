@@ -1,12 +1,8 @@
--- =====================================================
 -- PHASE 5: Prompt Engineering Experiment
 -- Few-Shot Classification using Gemini
--- =====================================================
 
 
--- =====================================================
 -- Generate Few-Shot Predictions
--- =====================================================
 
 CREATE OR REPLACE TABLE text_analytics.gemini_few_shot_predictions AS
 SELECT
@@ -54,9 +50,7 @@ FROM ML.GENERATE_TEXT(
 
 
 
--- =====================================================
 -- Convert Predictions to Numeric Labels
--- =====================================================
 
 CREATE OR REPLACE TABLE text_analytics.gemini_few_shot_numeric AS
 SELECT
@@ -73,9 +67,7 @@ FROM text_analytics.gemini_few_shot_predictions;
 
 
 
--- =====================================================
 -- Evaluate Few-Shot Accuracy
--- =====================================================
 
 SELECT
   COUNT(*) AS total_samples,
